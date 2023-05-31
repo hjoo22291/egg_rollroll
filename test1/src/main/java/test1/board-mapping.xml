@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board"> <!-- mapping 파일이 여러개일때 주의할점! - mapper의 namespace명이 겹치면 안됨. -->
+
+
+<!-- 전체 게시물 갯수 가져오기 -->
+<select id="getTotalBoard" resultType="int">
+	select count(*) from eggboard
+</select> 
+
+<!-- 글 추가하기 -->
+<!-- <insert id="insertBoard" parameterType="boarddto">
+	insert into board(title, contents, writer, pw, viewcount, writingtime) 
+	values(#{title}, #{contents}, #{writer}, #{pw}, 0, now())
+</insert>
+ -->
+</mapper>
+
