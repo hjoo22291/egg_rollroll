@@ -20,7 +20,7 @@ $(document).ready(function(){
 				alert(error);
 			}
 		});
-		
+		alert("포크 테스트!); 
 	});//ajaxbtn
 	
 });//ready

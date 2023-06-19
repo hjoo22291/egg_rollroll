@@ -1,0 +1,41 @@
+@charset "UTF-8";
+@font-face {
+font-family: 'UhBeeSe_hyun';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+* {font-family: 'UhBeeSe_hyun';}
+
+/*myinfo 내정보창 전체*/
+#myinfo_Box{
+position:absolute;
+width: 600px; height: 380px;
+top:50%; left:50%;
+transform:translate(-50%, -50%);
+padding:10px;
+background-color: white;
+text-align:center;
+}
+
+
+/* 비밀번호 변경, 창 닫기 */
+.myinfo_btn{
+width: 130px;
+height: 40px;
+line-height: 42px;
+padding: 0;
+border: none;
+background-color : white;
+cursor: pointer;
+margin : 10px;
+}
+
+/*현재비밀번호, 새 비밀번호 입력칸*/
+.myinfo_group{
+   width:200px;
+   height : 20px;
+   padding: 5px;
+   margin: 5px;
+}
