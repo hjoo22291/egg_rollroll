@@ -1,0 +1,44 @@
+@charset "UTF-8";
+@font-face {
+font-family: 'UhBeeSe_hyun';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+* {font-family: 'UhBeeSe_hyun';}
+
+/*회원가입창 가운데로*/
+#join_Box {
+    position:absolute;
+    width: 600px;
+    height: 320px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    padding:10px;
+    background-color: white;
+    text-align:center;
+}
+
+/* 이름, 이메일, 비밀번호 input칸 사이즈*/
+.join_btn_group{
+    width:200px;
+    height : 20px;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* join_btn 가입완료버튼 색상 크기지정*/
+#join_btn {
+    margin: 10px;
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background-color : white;
+    margin : 10px;
+    font-size : 15px;
+    cursor: pointer;
+}

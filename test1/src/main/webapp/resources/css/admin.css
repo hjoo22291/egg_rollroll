@@ -1,0 +1,227 @@
+@charset "UTF-8";
+/* @font-face {
+font-family: 'UhBeeSe_hyun';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+* {font-family: 'UhBeeSe_hyun';}
+ */
+body{  }
+
+
+
+header{
+background-color:#eead00; /*진남색 : #284c7e  ,  노랑? : #ffb900 , 더진한노랑:#eead00  */
+color: white;
+font-size:50px ;
+height:140px;
+line-height:150px;
+/* text-align:center; */
+/* border: solid 2px silver; */
+}
+
+
+/*aside내 input버튼*/
+aside input{
+	width :  80%;     /*180px;*/
+	height : 50px;
+	margin : 15px;
+	background-color: transparent;
+	border-color: transparent;
+	cursor: pointer;
+}
+
+
+nav{
+text-align:center;
+height:50px;
+background-color: #4e4e4e;
+/* line-height:100px; */
+/* border: solid 2px aqua; */
+}
+
+
+/*홀수 메뉴 - 현재는 그냥 색통일*/
+#div_odd{
+	display: flex; 
+	justify-content: center;
+	background-color: red;
+	background-color:#ececec;
+	margin:3px;
+}
+/*짝수 메뉴- 현재는 그냥 색통일*/
+#div_even{
+	display: flex; 
+	justify-content: center;
+	background-color: blue;
+	background-color:#ececec;
+	margin:3px;
+}
+
+
+/*왼,오 있음*/
+aside{
+float:left;
+width:10%;
+height:690px; 
+/* border: solid 2px aqua; */
+margin: 0 auto;
+}
+
+/*aside안에 배경색 때문에*/
+#div_aside{
+height: 99%;
+width:100%;
+background-color: #f7f7f7;
+}
+
+
+section{
+width:79%; 
+float:left;
+height:690px; 
+/* border: solid 2px aqua; */
+}
+
+/*섹션안에 글자 패딩때문에*/
+#section_text{
+	padding:15px;
+	height: 95%;
+}
+
+
+footer{
+/* border: solid 2px red; */
+font-size:9px;
+clear:both;
+text-align:center;
+height:30px;
+color: #BDBDBD;
+}
+
+
+/* --테이블 CSS----------------------------------------------------- */
+
+td button {
+  background-color: transparent;
+  border: solid 1px #BDBDBD;
+  cursor: pointer;
+}
+
+#div_page {
+  text-align: center;
+}
+
+div a {
+  text-decoration: none;
+  color: #434343;
+  font-size: 15px;
+}
+
+table {
+  border: 1px #a39485 solid;
+  font-size: .9em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th {
+  text-align: left;
+}
+
+thead {
+  font-weight: bold;
+  color: white;
+  background: #ffc11e;
+}
+
+td,
+th {
+  padding: 1em .5em;
+  vertical-align: middle;
+}
+
+td {
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  background: #fff;
+}
+
+table a {
+  color: #73685d;
+}
+
+@media all and (max-width: 768px) {
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  th {
+    text-align: right;
+  }
+
+  table {
+    position: relative;
+    padding-bottom: 0;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  }
+
+  thead {
+    float: left;
+    white-space: nowrap;
+  }
+
+  tbody {
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  th {
+    border-bottom: 1px solid #a39485;
+  }
+
+  td {
+    border-bottom: 1px solid #e5e5e5;
+  }
+}
+
+/*--------테이블css end-------------------------------------------*/
+
+/* Custom styling for newly added rows */
+.table-row-styling {
+  /* Add your custom styling here */
+  /* For example: */
+  background-color: #f5f5f5;
+  font-weight: bold;
+  color: #000;
+}
+
+
+/*바닥페이지버튼*/
+.adminpagelink_member, .adminpagelink_board {
+  background-color: transparent;
+  border: solid 1px #FFFFFF;
+  cursor: pointer;
+}
+
+
+  

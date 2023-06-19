@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="friends">
+
+<select id="friendsList" resultType="friendsdto" parameterType="String">
+	select * from eggfriends where myid=#{myid}
+</select>
+
+<!-- 친구가 즐겨찾기 되어있는지? -->
+<select id="isBookmarkedFriends" resultType="int" parameterType="friendsdto">
+	select count(*) from eggfriends where myid = #{myid} and friendsid = #{friendsid}
+</select>
+
+<!-- 친구 추가하기 -->
+ <insert id="addFriends" parameterType="friendsdto">
+ 	insert into eggfriends (myid, friendsid) value (#{myid}, #{friendsid})
+</insert>
+
+
+<!-- 친구 삭제 -->
+<delete id="deleteFriends" parameterType="friendsdto">
+	delete from eggfriends where myid = #{myid} and friendsid = #{friendsid}
+</delete>
+
+<!-- 친구목록 검색 -->
+<select id="searchFriends" resultType="friendsdto" parameterType="map">
+    select * from eggfriends where myid = #{myid} and friendsid = #{author}
+</select>
+
+
+</mapper>
+

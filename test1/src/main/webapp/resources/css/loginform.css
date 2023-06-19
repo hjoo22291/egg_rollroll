@@ -1,0 +1,42 @@
+@charset "UTF-8";
+@font-face {
+font-family: 'UhBeeSe_hyun';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+* {font-family: 'UhBeeSe_hyun';}
+
+/*로그인창 전체*/
+
+#login_Box {
+position:absolute;
+width: 600px; height: 320px;
+top:50%; left:50%;
+transform:translate(-50%, -50%);
+padding:10px;
+background-color: white;
+text-align:center;
+}
+
+
+/* 회원정보찾기, 회원가입, 로그인창*/
+.login_find_Info, #login_submit_btn{
+width: 130px;
+height: 40px;
+line-height: 42px;
+padding: 0;
+border: none;
+background-color : white;
+cursor: pointer;
+margin : 10px;
+}
+
+/*아이디, 비밀번호입력칸 크기지정*/
+.login_form_group{
+   width:200px;
+   height : 20px;
+   padding: 5px;
+   margin: 5px;
+}

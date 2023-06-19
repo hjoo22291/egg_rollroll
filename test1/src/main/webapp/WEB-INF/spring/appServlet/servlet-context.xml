@@ -26,7 +26,10 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="test1" />
+	<context:component-scan base-package="service" />
+	<context:component-scan base-package="controller" />
+	<context:component-scan base-package="dao" />
+	<context:component-scan base-package="dto" />
 
 <!-- 추가 -->
 <!-- request가 multipart타입(파일)이라고 해석하도록 알려주기 -->

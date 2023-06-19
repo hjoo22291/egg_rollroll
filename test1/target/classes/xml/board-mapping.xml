@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="board"> <!-- mapping 파일이 여러개일때 주의할점! - mapper의 namespace명이 겹치면 안됨. -->
+
+
+<!-- 글 추가하기 -->
+ <insert id="insertBoard" parameterType="boarddto">
+	INSERT INTO eggboard (receiver, writer, nickname, contents, boardpw, eggcolor)
+	VALUES (#{receiver}, #{writer}, #{nickname}, #{contents}, #{boardpw}, #{eggcolor})
+</insert>
+
+<!-- 전체 게시물 갯수 가져오기 -->
+<select id="getTotalBoard" resultType="int">
+	select count(*) from eggboard
+</select> 
+
+<!-- id 맞는 글 갯수 가져오기 -->
+<select id="getCountMyBoard" resultType="int" parameterType="String">
+	select count(*) from eggboard where receiver=#{receiver}
+</select> 
+
+<!-- id에 맞는 글목록 -->
+<select id="getSearchMyBoard" resultType="boarddto" parameterType="hashmap">
+	select * from eggboard where ${colname} = #{colvalue} order by writingtime asc limit ${limitindex}, ${limitcount}
+</select>
+
+
+<!-- 페이징처리 조회 -->
+<select id="boardPagingList" resultType="boarddto" parameterType="java.util.ArrayList">
+	select * from eggboard order by writingtime desc limit
+	<foreach collection="list" item="num" separator=",">
+		#{num}
+	</foreach>
+</select>
+
+ <!-- 선택된 게시물 조회 -->
+<select id="getBoardDetail" resultType="boarddto" parameterType="int">
+	select * from eggboard where seq=#{seq}
+</select>
+
+<!-- 선택된 게시물 삭제 -->
+<delete id="deleteBoard" parameterType="int">
+	delete from eggboard where seq=#{seq}
+</delete>
+
+<!-- 게시물 수정 -->
+<update id="updateBoard" parameterType="boarddto">
+	update eggboard set nickname=#{nickname}, contents=#{contents}, eggcolor=#{eggcolor}, boardpw=#{boardpw}, writingtime=now() where seq=#{seq}
+</update>
+
+ 
+
+</mapper>
+
