@@ -9,6 +9,8 @@
 </head>
 <script>
 $(document).ready(function(){
+	//alert("h_테스트!);
+
 	if ("${sessionid}"=='eggking') { //admin계정이면
 		var form = document.createElement('form'); // 폼객체 생성
 		form.setAttribute('method', 'post'); //get,post 가능
